@@ -1,0 +1,13 @@
+{
+  "minVersion": 1,
+  "manifestVersion": 2,
+  "appVersion": "v1.0.0",
+  "waf": false,
+  "id": "com.koffee.coreball",
+  "name": "Core Ball",
+  "author": "The Koffee Team",
+  "description": "A KWebBrew Port of Core Ball",
+  "repo": "https://www.arealme.com/coreball/en/",
+  "icon": "icon.png",
+  "entrypoint": "index.html"
+}

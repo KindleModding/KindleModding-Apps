@@ -1,0 +1,13 @@
+{
+  "minVersion": 1,
+  "manifestVersion": 2,
+  "appVersion": "v1.0.0",
+  "waf": false,
+  "id": "com.koffee.gameoflife",
+  "name": "Conway's Game of Life",
+  "author": "The Koffee Team",
+  "description": "Conway's Game of Life for The Koffee Launcher & KWebBrew!",
+  "repo": "https://playgameoflife.com/",
+  "icon": "icon.png",
+  "entrypoint": "index.html"
+}
