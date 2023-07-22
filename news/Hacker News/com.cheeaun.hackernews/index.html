@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>HackerWeb</title>
+<meta name="apple-mobile-web-app-title" content="HackerWeb">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="color-scheme" id="meta-color-scheme" content="dark light">
+<link rel="shortcut icon" href="icons/favicon.ico">
+<link rel="shortcut icon" sizes="196x196" href="icons/icon-196.png">
+<link rel="apple-touch-icon-precomposed" href="icons/icon-180.png">
+<link rel="manifest" href="manifest.json">
+<style>body{ visibility: hidden; }</style>
+</head>
+<body>
+<div class="view hidden" id="view-home">
+	<header>
+		<a href="#/about" class="header-button header-button-left"><button>About</button></a>
+		<h1 style="margin: 0 65px;">HackerWeb</h1>
+		<a class="header-button header-button-icon header-button-right" id="view-home-refresh"><button><i class="icon-refresh">Refresh</i></button></a>
+	</header>
+	<div class="scroll">
+		<section>
+		</section>
+	</div>
+</div>
+<div class="view hidden shaded" id="view-comments">
+	<header>
+		<a href="#/" class="header-button header-button-left header-back-button"><button>News</button></a>
+		<h1 style="margin: 0 75px;"></h1>
+	</header>
+	<div class="scroll">
+		<section>
+		</section>
+	</div>
+</div>
+<div class="view hidden shaded" id="view-about">
+	<header>
+		<a href="#/" class="header-button header-button-left"><button>Close</button></a>
+		<h1>About</h1>
+	</header>
+	<div class="scroll striped">
+		<section>
+			<div class="grouped-tableview cf" id="hw-appearance-container" hidden>
+				<div class="inline-block">Appearance</div>
+				<div class="inline-block" id="hw-appearance">
+					<label><input name="hw-appearance" type="radio" value="light"> Light</label>
+					<label><input name="hw-appearance" type="radio" value="dark"> Dark</label>
+					<label hidden><input name="hw-appearance" type="radio" value="auto"> Auto</label>
+				</div>
+			</div>
+			<ul class="grouped-tableview grouped-tableview-links">
+				<li><a href="https://www.buymeacoffee.com/cheeaun" target="_blank">☕️ Buy me a cup of coffee</a></li>
+			</ul>
+			<ul class="grouped-tableview grouped-tableview-links">
+				<li><a href="https://hackerwebapp.com/" target="_blank" class="disclosure">HackerWeb homepage</a></li>
+				<li><a href="https://news.ycombinator.com/" target="_blank" class="disclosure">Hacker News homepage</a></li>
+				<li><a href="https://github.com/cheeaun/hackerweb" target="_blank" class="disclosure">HackerWeb on GitHub</a></li>
+				<li><a href="https://twitter.com/cheeaun" target="_blank" class="disclosure">Follow @cheeaun</a></li>
+				<li><a href="mailto:cheeaun+hackerweb@gmail.com?subject=HackerWeb feedback" class="disclosure">Send Feedback</a></li>
+			</ul>
+			<p class="foot-label">Built by Lim Chee Aun.<br>Not affiliated with Hacker News or YCombinator.</p>
+		</section>
+	</div>
+</div>
+<script>
+(function(d, ua){
+	var hasLocalStorage = false;
+	try {
+		var testKey = '__hackerweb__test';
+		localStorage.setItem(testKey, testKey);
+		localStorage.removeItem(testKey);
+		hasLocalStorage = true;
+	} catch(e) {}
+
+	var theme = 'web';
+	if (ua && /iPhone|iPod|iPad/.test(ua)){
+		var version = parseInt((ua.match(/ OS (\d+)_/i) || [,0])[1], 10);
+		if (version >= 7){
+			theme = 'ios-2';
+		} else if (version >= 5){
+			theme = 'ios';
+		}
+	}
+	if (hasLocalStorage) theme = localStorage['hackerweb:options:theme'] || theme;
+
+	var head = d.head || d.getElementsByTagName('head')[0];
+
+	var link = d.createElement('link');
+	link.rel = 'stylesheet';
+	link.href = 'assets/css/hw-' + theme + '.min.css';
+	head.insertBefore(link, head.lastChild);
+
+	var script = d.createElement('script');
+	script.src = 'js/hw-' + theme + '.min.js';
+	head.insertBefore(script, head.lastChild);
+})(document, navigator.userAgent);
+
+if ('serviceWorker' in navigator){
+	navigator.serviceWorker.register('service-worker.js').then(function(registration){
+		console.log('ServiceWorker registration successful with scope: ', registration.scope);
+	}).catch(function(err){
+		console.log('ServiceWorker registration failed: ', err);
+	});
+}
+
+if (/preview/i.test(location.search)) document.querySelector('.scroll').style.height = 'auto';
+</script>
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "7a9e471bce284d7e8def4686a09926dc"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>

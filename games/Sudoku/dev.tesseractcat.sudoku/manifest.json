@@ -1,0 +1,13 @@
+{
+  "minVersion": 1,
+  "manifestVersion": 2,
+  "appVersion": "v2.0.0",
+  "waf": false,
+  "id": "dev.tesseractcat.sudoku",
+  "name": "Sudoku",
+  "author": "Tesseractcat",
+  "description": "Sudoku for the Kindle",
+  "repo": "https://www.mobileread.com/forums/showthread.php?p=4276488#post4276488",
+  "icon": "icon.png",
+  "entrypoint": "sudoku.html"
+}

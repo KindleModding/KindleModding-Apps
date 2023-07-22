@@ -9,6 +9,18 @@ See the table below for compatability information, note that `WAFs` cannot be us
 
 | ID                        | Description                                                                 | WAF (Mesquito Only?) |
 |---------------------------|-----------------------------------------------------------------------------|----------------------|
+
+# Games
 | com.koffee.coreball       | A KWebBrew Port of Core Ball                                                | No                   |
 | com.koffee.gameoflife     | Conway's Game of Life for The Koffee Launcher & KWebBrew!                   | No                   |
 | com.luketheduke.adarkroom | [A Dark Room](https://en.wikipedia.org/wiki/A_Dark_Room) ported to KWebBrew | No                   |
+| com.bluebotlaboratories.kchess       | A KWebBrew Port of Chess                                                | No                   |
+| dev.tesseractcat.sudoku     | A KWebBrew Port of Sudoku                   | No                   |
+
+# News
+| com.cheeaun.hackernews | The Hacker News Website, ported to KWebBrew | No                   |
+
+# Tools
+| com.koffee.calc | A Calculator for KWebBrew | No                   |
+| com.mesquito.mesquitodevtools | DevTools for Mesquito | No                   |
+| com.mesquito.settings | The Mesquito Settings App | No                   |

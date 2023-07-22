@@ -1,0 +1,12 @@
+{
+  "minVersion": 1,
+  "version": 1,
+  "waf": false,
+  "id": "com.luketheduke.adarkroom",
+  "name": "A Dark Room",
+  "author": "luketheduke",
+  "description": "",
+  "repo": "",
+  "icon": "icon.jpg",
+  "entrypoint": "index.html"
+}

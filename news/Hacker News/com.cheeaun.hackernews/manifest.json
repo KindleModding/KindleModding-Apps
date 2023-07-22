@@ -1,0 +1,13 @@
+{
+  "minVersion": 1,
+  "manifestVersion": 2,
+  "appVersion": "v1.0.0",
+  "waf": false,
+  "id": "com.cheeaun.hackernews",
+  "name": "Hacker News",
+  "author": "Chee Aun, The Koffee Team",
+  "description": "The Hacker News app for The Koffee Launcher & KWebBrew! *Internet Required",
+  "repo": "https://github.com/cheeaun/hackerweb",
+  "icon": "icon.png",
+  "entrypoint": "index.html"
+}

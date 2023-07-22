@@ -1,0 +1,41 @@
+@font-face {
+    font-family: Quicksand;
+    src: url(fonts/quicksand.ttf);
+  }
+  
+  * {
+    font-family: "Quicksand", sans-serif;
+  }
+
+body{
+   background-attachment:fixed;
+   background-color: #555555;
+
+}
+
+
+#screen{
+    font-family: "Quicksand", sans-serif;
+    border-radius:5px;
+    border:1px solid #555555;
+    background-color:white;
+    color:#555555;
+
+}
+
+.calc-buttons{
+    font-family: "Quicksand", sans-serif;
+    width:75px;
+
+}
+
+.container{
+   margin-top: 15%;
+   font-family: "Quicksand", sans-serif;
+   border-radius: 20px;
+   border:5px solid #555555;
+   background-color: white;
+   padding-top:25px;
+   width:400px;
+
+}

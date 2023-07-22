@@ -1,0 +1,13 @@
+{
+  "minVersion": 1,
+  "manifestVersion": 2,
+  "appVersion": "v1.0.0",
+  "waf": false,
+  "id": "com.koffee.calc",
+  "name": "Calculator",
+  "author": "The Koffee Team",
+  "description": "A Calculator for Koffee & KWebBrew",
+  "repo": "https://github.com/koffeelauncher",
+  "icon": "icon.png",
+  "entrypoint": "index.html"
+}
